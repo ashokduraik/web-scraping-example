@@ -23,8 +23,24 @@ An example of web scraping using Playwright involves accessing data from the web
 
 ## Installation
 
+Clone this repo.
+
+```
+cd web-scraping-example
+npm install
+```
+
 ## Configuration
+
+Please clone the .env.example file and rename it to .env.
+Please provide your demowebshop account username and password to the APP_USERNAME and APP_PASSWORD
 
 ## Run
 
+```
+npm start
+```
+
 ## Sample Output
+
+![sampleout](/screenshot/output-sample.png)

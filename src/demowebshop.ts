@@ -43,7 +43,7 @@ export default class demowebshop {
     await this.takeScreenshot("orders");
   }
 
-  async getAllOrderItems() {
+  async getOrderItems(size: number) {
     await this.goToOrders();
     const orders = await this.page.locator(".order-item").all();
     let isFirstItem = true;
@@ -87,6 +87,8 @@ export default class demowebshop {
           Total: total,
         });
       }
+
+      if (size <= allOrders.length) return allOrders;
     }
 
     return allOrders;

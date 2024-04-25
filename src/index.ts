@@ -16,7 +16,7 @@ async function main() {
     const demowebshop = new Demowebshop(page);
     await demowebshop.init();
     await demowebshop.login();
-    const orderItems = await demowebshop.getAllOrderItems();
+    const orderItems = await demowebshop.getOrderItems(10);
     utils.printTableData(orderItems);
   } catch (e) {
     await utils.takeScreenshot(page, "error", "Error");
